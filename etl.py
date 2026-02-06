@@ -3,7 +3,7 @@ import pandas as pd
 
 def limpar_nome_colunas(df):
     """Padroniza nomes de colunas: minusculo e sem espaco"""
-    df.columns = [c.lower().replace(' ', '_') for c in df.columns]
+    df.columns = [c.lower().replace(' ', '-') for c in df.columns]
     return df
 
 if __name__ == "__main__":
