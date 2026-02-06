@@ -1,0 +1,21 @@
+name: gh-actions-learn
+on: 
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dizer Olá
+        run: echo "Olá! A automação está funcionando."
+
+      - name: Verificar Ambiente
+        run: |
+          echo "Estou rodando no sistema operacional:"
+          cat /etc/os-release
+          echo "Versão do Python instalada:"
+          python --version
+
+    
